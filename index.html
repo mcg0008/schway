@@ -41,35 +41,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <!--jPanelMenu-->
   <script src="Scripts/jquery.jpanelmenu.js"></script>
-  <script>
-     $(document).ready(function () {
-       
-       var jPM = $.jPanelMenu();
-       
-       jPM.on();
-       
-       //Change color of active, plus close jPM.
-        $('.list-group a').click(function(){
-          $('.list-group .active').removeClass('active');
-          $(this).addClass('active');
-          jPM.trigger(true);
-        });
-
-        //To close jPM on click. 
-        $('.container').click(function(){
-          jPM.close();
-        });
-      });
-      
-      function showEvents(){
-        $('#menu a[href="#events"]').tab('show');
-      }
-      
-      
-      function showAbout(){
-        $('#menu a[href="#about"]').tab('show');
-      }
-  </script>
+  
 
 </body>
 
