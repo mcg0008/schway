@@ -42,6 +42,27 @@
   <!--jPanelMenu-->
   <script src="Scripts/jquery.jpanelmenu.js"></script>
   
+  <script>
+     $(document).ready(function () {
+       
+       var jPM = $.jPanelMenu();
+       jPM.on();
+       
+       //Change color of active, plus close jPM.
+        $('.list-group a').click(function(){
+          $('.list-group .active').removeClass('active');
+          $(this).addClass('active');
+          jPM.trigger(true);
+        });
+
+        //To close jPM on click. 
+        $('.container').click(function(){
+          jPM.close();
+        });
+      });
+      
+  </script>
+  
 
 </body>
 
