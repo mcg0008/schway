@@ -9,7 +9,7 @@ body {
 	height:100%;
 }
 #jPanelMenu-menu{
-	
+	margin-top: 50px;
 	background-color: #FFF;
 	overflow: hidden;
 }
@@ -17,11 +17,6 @@ a.list-group-item{
 	font-size: 15px;
 	border-right: none;
 	border-left:none;
-}
-a.list-group-item.active{
-	/*background-color:#f68026;*/
-/*	border-right: none;
-	border-left:none;*/
 }
 #menu{
 	display:none;
