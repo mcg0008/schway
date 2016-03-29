@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -31,8 +31,8 @@
   </nav>
   
   <div id="menu" class="list-group">
-    <a href="#events" role="tab" data-toggle="tab">Events</a>
-    <a href="#about" role="tab" data-toggle="tab">About</a>
+    <a href="#events" class="list-group-item active" role="tab" data-toggle="tab">Events</a>
+    <a href="#about" class="list-group-item" role="tab" data-toggle="tab">About</a>
   </div>
   
   <!--jQuery CDN from Microsoft-->
@@ -44,12 +44,31 @@
   <script>
      $(document).ready(function () {
        
-       var jPM = $.jPanelMenu({
-         menu: '#menu-selector'
-       });
+       var jPM = $.jPanelMenu();
        
        jPM.on();
-    
+       
+       //Change color of active, plus close jPM.
+        $('.list-group a').click(function(){
+          $('.list-group .active').removeClass('active');
+          $(this).addClass('active');
+          jPM.trigger(true);
+        });
+
+        //To close jPM on click. 
+        $('.container').click(function(){
+          jPM.close();
+        });
+      });
+      
+      function showEvents(){
+        $('#menu a[href="#events"]').tab('show');
+      }
+      
+      
+      function showAbout(){
+        $('#menu a[href="#about"]').tab('show');
+      }
   </script>
 
 </body>
